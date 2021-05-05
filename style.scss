@@ -1,0 +1,150 @@
+:root {
+  --color-bright-orange: hsl(31, 77%, 52%);
+  --color-dark-cyan: hsl(184, 100%, 22%);
+  --color-dark-cyan2: hsl(179, 100%, 13%);
+  --padding-in-card: 26px;
+  --color-light-gray: hsl(0, 0%, 95%);
+  --color-transparant-white: hsla(0, 0%, 100%, 0.75);
+}
+
+html {
+  font-size: 100%;
+  box-sizing: initial;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--color-light-gray);
+  color: #fff;
+  font-family: 'Lexend Deca', sans-serif;
+
+  h1 {
+    margin: 0;
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.card {
+  margin: 25% 0;
+
+  h1 {
+    font-family: 'Big Shoulders Display', cursive;
+    margin: 21.44px 0;
+    text-transform: uppercase;
+  }
+
+  p {
+    font-size: 15px;
+    color: var(--color-transparant-white);
+    margin-bottom: 28px;
+  }
+
+  button {
+    background-color: var(--color-light-gray);
+    // color: var(--color-transparant-white);
+    width: 50%;
+    height: 35px;
+    border-radius: 24px;
+    border: none;
+    margin-bottom: 24px;
+    font-family: 'Lexend Deca', sans-serif;
+  }
+
+  &__sedan {
+    background-color: var(--color-bright-orange);
+    padding: var(--padding-in-card);
+    border-radius: 5px 5px 0 0;
+
+    button {
+      color: var(--color-bright-orange);
+    }
+  }
+
+  &__suv {
+    background-color: var(--color-dark-cyan);
+    padding: var(--padding-in-card);
+
+    button {
+      color: var(--color-dark-cyan);
+    }
+  }
+
+  &__luxury {
+    background-color: var(--color-dark-cyan2);
+    padding: var(--padding-in-card);
+    border-radius: 0 0 5px 5px;
+
+    button {
+      color: var(--color-dark-cyan2);
+    }
+  }
+}
+
+// Desktop view
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+
+  p {
+    margin-right: 33px;
+  }
+
+  h1 {
+    margin: 434px 0;
+  }
+
+  button {
+    margin-top: 33px;
+    &:hover {
+      background-color: transparent;
+      border: 1px solid #fff;
+      color: white;
+      cursor: pointer;
+    }
+  }
+
+  .card {
+    display: flex;
+    margin-left: 26px;
+
+    &__image {
+      margin-top: 26px;
+    }
+
+    &__sedan {
+      border-radius: 5px 0 0 5px;
+    }
+
+    &__suv {
+      border-radius: 0;
+    }
+
+    &__luxury {
+      border-radius: 0 5px 5px 0;
+    }
+  }
+}
+// @media (min-width: 992px) {
+//   .container {
+//     width: 970px;
+//   }
+// }
+// @media (min-width: 1200px) {
+//   .container {
+//     width: 1170px;
+//   }
+// }
